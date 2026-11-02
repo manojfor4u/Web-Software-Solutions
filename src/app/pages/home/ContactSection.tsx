@@ -10,7 +10,7 @@ export default function ContactSection() {
       </div>
       <div className="contact-copy"><h2>Have a Project in Mind?</h2><p>Let’s turn your idea into a powerful website.</p></div>
       <div className="contact-actions">
-        <a className="button button-light" href="mailto:hello@webdevelopmentsolutions.in">Get a Free Quote <ArrowForwardIcon fontSize="small" /></a>
+        <a className="button button-light" href="mailto:connectbox26@gmail.com">Get a Free Quote <ArrowForwardIcon fontSize="small" /></a>
         <a className="button button-whatsapp" href="https://wa.me/917558652571" target="_blank" rel="noreferrer"><WhatsAppIcon fontSize="small" aria-hidden="true" /> Chat on WhatsApp</a>
         <a className="button button-call" href="tel:+917558652571"><PhoneOutlinedIcon fontSize="small" aria-hidden="true" /> +91 75586 52571</a>
       </div>

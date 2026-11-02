@@ -24,7 +24,7 @@ export default function PortfolioSection() {
   return (
     <section className="portfolio-section section-pad" id="portfolio">
       <div className="page-container">
-        <SectionHeading eyebrow="Made with care" title="Selected work" description="Every project starts with a real business challenge—and ends with a useful, polished experience." />
+        <SectionHeading title="Our Recent Work" description="A glimpse of our actual projects that have helped businesses grow online." />
         <div className="portfolio-grid">
           {projects.map((project) => (
             <article className="portfolio-card" key={project.title}>
@@ -37,7 +37,10 @@ export default function PortfolioSection() {
                   </svg>
                 )}
               </div>
-              <div className="portfolio-copy"><h3>{project.title}</h3></div>
+              <div className="portfolio-copy">
+                <h3>{project.title} Website</h3>
+                <span className="portfolio-project-type">Website Preview</span>
+              </div>
             </article>
           ))}
         </div>

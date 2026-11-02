@@ -1,6 +1,6 @@
 @media (max-width: 1100px) {
   .header-inner {
-    width: calc(100% - 1.5rem);
+    width: 92%;
   }
 
   .header-inner > .brand > .brand-logo {
@@ -30,22 +30,61 @@
   }
 
   .service-card {
-    padding: 1rem;
+    padding: .6rem;
   }
 }
 
 @media (max-width: 780px) {
   .trust-section {
-    padding-block: 2rem 1.5rem;
+    padding-block: 1.2rem;
+  }
+
+  .trust-inner {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .trust-reasons {
+    padding: 0 0 .85rem;
+    border-right: 0;
+    border-bottom: 1px solid rgb(255 255 255 / 55%);
+  }
+
+  .trust-reasons h2 {
+    text-align: center;
+  }
+
+  .trust-reasons ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: min(100%, 520px);
+    margin-inline: auto;
+  }
+
+  .trust-record {
+    padding-left: 0;
   }
 
   .trust-metrics {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: .85rem;
+    gap: .65rem;
   }
 
-  .trust-metric {
-    min-height: 220px;
+  .services-grid,
+  .portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 1rem;
+  }
+
+  .process-arrow {
+    display: none;
   }
 
   .header-inner {
@@ -285,6 +324,12 @@
     background: #f7faff;
   }
 
+  .primary-navigation > a.is-active:not(.header-phone, .header-whatsapp) {
+    padding-left: .7rem;
+    color: #fff;
+    background: #0876ed;
+  }
+
   .primary-navigation > .header-phone,
   .primary-navigation > .header-whatsapp {
     display: none;
@@ -317,27 +362,39 @@
   }
 
   .footer-inner {
-    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
   }
 
-  .footer-contact-link {
-    grid-column: 1;
-    grid-row: auto;
-    justify-self: start;
+  .footer-intro {
+    grid-column: 1 / -1;
+  }
+
+  .footer-contact {
+    grid-column: 2;
   }
 }
 
 @media (max-width: 640px) {
   .page-container {
-    width: calc(100% - 1.5rem);
+    width: 92%;
   }
 
   .section-pad {
-    padding-block: 3.3rem;
+    padding-block: 1.6rem;
+  }
+
+  .portfolio-section.section-pad {
+    padding-block: .7rem;
+  }
+
+  .pricing-section.section-pad {
+    padding-block: 1rem;
   }
 
   .section-heading {
-    margin-bottom: 1.5rem;
+    margin-bottom: .9rem;
   }
 
   .section-heading p {
@@ -347,52 +404,63 @@
   }
 
   .trust-section {
-    margin-block: 2rem 2.5rem;
-    padding: 1.75rem .75rem 1.25rem;
+    margin-block: 0;
+    padding: 1.15rem .75rem;
   }
 
   .trust-inner {
     width: 100%;
+    gap: .9rem;
   }
 
-  .trust-inner > h2 {
-    font-size: clamp(2rem, 8vw, 2.7rem);
+  .trust-inner h2 {
+    font-size: clamp(1.35rem, 6vw, 1.7rem);
   }
 
   .trust-description {
     max-width: 34rem;
-    margin-block: .75rem 1.4rem;
-    font-size: .95rem;
+    margin-block: .25rem .65rem;
+    font-size: .72rem;
+  }
+
+  .trust-reasons ul {
+    grid-template-columns: 1fr;
+    gap: .3rem;
+    width: fit-content;
+  }
+
+  .trust-reasons li {
+    font-size: .72rem;
   }
 
   .trust-metrics {
     grid-template-columns: 1fr;
-    gap: .75rem;
+    gap: .5rem;
   }
 
   .trust-metric {
-    min-height: 96px;
+    min-height: 74px;
     display: grid;
-    grid-template-columns: 58px minmax(0, 1fr);
+    grid-template-columns: 42px minmax(0, 1fr);
     justify-items: stretch;
-    gap: .25rem 1rem;
-    padding: .75rem 1rem;
-    border-radius: 18px;
-    border-width: 2px;
+    gap: .2rem .55rem;
+    padding: .45rem .65rem;
+    border-radius: 12px;
+    border-width: 1px;
     text-align: left;
   }
 
   .trust-metric strong {
-    font-size: clamp(1.7rem, 7vw, 2.35rem);
+    font-size: 1.3rem;
   }
 
   .trust-metric-content > span {
-    font-size: .88rem;
+    font-size: .7rem;
   }
 
   .trust-metric-icon {
-    width: 52px;
-    height: 52px;
+    width: 38px;
+    height: 38px;
     grid-column: 1;
     grid-row: 1;
     margin: 0;
@@ -400,8 +468,8 @@
   }
 
   .trust-metric-icon svg {
-    width: 30px;
-    height: 30px;
+    width: 23px;
+    height: 23px;
   }
 
   .trust-metric-content {
@@ -414,12 +482,12 @@
   .trust-rating-value {
     flex-direction: row;
     align-items: center;
-    gap: .5rem;
+    gap: .35rem;
   }
 
   .trust-metric-rating .MuiRating-root {
     margin: 0;
-    font-size: 1.1rem;
+    font-size: .9rem;
   }
 
   .trust-metric-accent {
@@ -432,7 +500,13 @@
   }
 
   .header-inner {
-    width: calc(100% - 1.5rem);
+    width: 92%;
+  }
+
+  .services-section .page-container,
+  .pricing-section .page-container,
+  .portfolio-section .page-container {
+    width: 92%;
   }
 
   .brand-logo {
@@ -443,7 +517,7 @@
     min-height: unset;
     grid-template-columns: 1fr;
     gap: 0;
-    padding-block: 1.5rem 1.8rem;
+    padding-block: 1.25rem 1rem;
   }
 
   .hero-section {
@@ -456,7 +530,7 @@
 
   .hero-copy h1 {
     max-width: 100%;
-    font-size: clamp(1.8rem, 8vw, 2.4rem);
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
     overflow-wrap: anywhere;
   }
 
@@ -481,10 +555,15 @@
 
   .hero-visual {
     width: min(100%, 440px);
-    height: 205px;
+    height: 190px;
     justify-self: center;
     margin-top: -.25rem;
     transform: none;
+  }
+
+  .hero-phone {
+    right: 16%;
+    bottom: 7%;
   }
 
   .checklist-card {
@@ -504,40 +583,39 @@
   }
 
   .portfolio-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .service-card {
-    min-height: 175px;
-    padding: 1rem;
+    min-height: 92px;
+    padding: .6rem .7rem;
   }
 
   .service-card h3 {
-    font-size: 1rem;
+    font-size: .82rem;
   }
 
   .service-card p {
-    font-size: .85rem;
+    font-size: .68rem;
   }
 
   .learn-more {
-    min-height: 28px;
-    padding-inline: .7rem;
-    font-size: .78rem;
+    width: 20px;
+    height: 20px;
   }
 
   .process-section {
-    margin-bottom: 3.3rem;
-    padding: 1.1rem .75rem;
+    margin-bottom: 0;
+    padding: 1rem 0;
   }
 
-  .process-section > h2 {
-    font-size: 1.35rem;
+  .process-section h2 {
+    font-size: 1.25rem;
   }
 
   .process-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.15rem .5rem;
+    gap: .9rem .5rem;
   }
 
   .process-arrow {
@@ -545,34 +623,43 @@
   }
 
   .process-icon {
-    width: 58px;
-    height: 58px;
+    width: 48px;
+    height: 48px;
   }
 
   .portfolio-grid {
-    gap: .9rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .55rem;
   }
 
   .project-preview {
     height: auto;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 1.55 / 1;
+  }
+
+  .portfolio-copy {
+    min-height: 42px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .18rem;
+  }
+
+  .portfolio-copy h3 {
+    width: 100%;
+    font-size: .68rem;
+  }
+
+  .portfolio-project-type {
+    font-size: .52rem;
   }
 
   .pricing-grid {
     gap: .85rem;
+    padding-inline: 0;
   }
 
   .pricing-card {
-    padding: 1.25rem;
-  }
-
-  .pricing-card-image {
-    min-height: 0;
-  }
-
-  .pricing-plan-image {
-    width: min(100%, 430px);
-    max-height: none;
+    padding: .8rem;
   }
 
   .contact-banner {
@@ -613,18 +700,20 @@
   }
 
   .footer-inner {
-    grid-template-columns: minmax(0, 1fr);
-    gap: .8rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem .65rem;
   }
 
-  .footer-contact-link {
-    grid-column: 1;
-    grid-row: auto;
-    justify-self: start;
+  .footer-intro {
+    grid-column: 1 / -1;
+  }
+
+  .footer-contact {
+    grid-column: 1 / -1;
   }
 
   .footer-meta {
-    grid-column: 1;
+    grid-column: 1 / -1;
   }
 }
 
@@ -644,6 +733,10 @@
 
   .process-step p {
     font-size: .73rem;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
   }
 }
 

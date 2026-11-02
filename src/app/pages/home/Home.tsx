@@ -6,7 +6,6 @@ import ServicesSection from './ServicesSection'
 import ProcessSection from './ProcessSection'
 import PortfolioSection from './PortfolioSection'
 import PricingSection from './PricingSection'
-import ContactSection from './ContactSection'
 
 export default function Home() {
   return (
@@ -18,7 +17,6 @@ export default function Home() {
         <ProcessSection />
         <PortfolioSection />
         <PricingSection />
-        <ContactSection />
         <TrustSection />
       </main>
       <Footer />

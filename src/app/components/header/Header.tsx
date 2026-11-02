@@ -22,6 +22,7 @@ const navigation = [
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [activeNavigation, setActiveNavigation] = useState('Home')
 
   const closeMenu = () => setMenuOpen(false)
 
@@ -45,7 +46,7 @@ export default function Header() {
   return (
     <header className={`site-header${menuOpen ? ' menu-open' : ''}`}>
       <div className="header-inner">
-        <a className="brand" href="#home" aria-label="Web Software Solutions home" onClick={closeMenu}>
+        <a className="brand" href="#home" aria-label="Web Software Solutions home" onClick={() => { setActiveNavigation('Home'); closeMenu() }}>
           <img className="brand-logo" src={companyLogo} alt="" />
         </a>
 
@@ -71,7 +72,7 @@ export default function Header() {
 
         <nav id="primary-navigation" className={`primary-navigation${menuOpen ? ' is-open' : ''}`} aria-label="Main navigation">
           <div className="mobile-nav-heading">
-            <a className="brand" href="#home" aria-label="Web Software Solutions home" onClick={closeMenu}>
+            <a className="brand" href="#home" aria-label="Web Software Solutions home" onClick={() => { setActiveNavigation('Home'); closeMenu() }}>
               <img className="brand-logo" src={companyLogo} alt="" />
             </a>
             <button
@@ -84,7 +85,13 @@ export default function Header() {
             </button>
           </div>
           {navigation.map(({ label, href, icon: Icon }) => (
-            <a key={label} href={href} onClick={closeMenu}>
+            <a
+              key={label}
+              href={href}
+              className={activeNavigation === label ? 'is-active' : undefined}
+              aria-current={activeNavigation === label ? 'location' : undefined}
+              onClick={() => { setActiveNavigation(label); closeMenu() }}
+            >
               <Icon className="mobile-nav-icon" aria-hidden="true" />
               <span>{label}</span>
             </a>

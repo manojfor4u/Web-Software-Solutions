@@ -16,17 +16,23 @@ const process = [
 
 export default function ProcessSection() {
   return (
-    <section className="process-section page-container" id="about">
-      <h2>Our Development Process</h2>
-      <div className="process-grid">
-        {process.map(({ icon: Icon, title, description }, index) => (
-          <div className="process-step" key={title}>
-            <div className="process-icon"><Icon aria-hidden="true" /></div>
-            <h3>{title}</h3>
-            <p>{description}</p>
-            {index < process.length - 1 && <span className="process-arrow" aria-hidden="true">→</span>}
-          </div>
-        ))}
+    <section className="process-section" id="about">
+      <div className="page-container">
+        <h2>Our Development Process</h2>
+        <p className="process-description">A simple, transparent and result-oriented process to bring your idea to life.</p>
+        <div className="process-grid">
+          {process.map(({ icon: Icon, title, description }, index) => (
+            <div className="process-step" key={title}>
+              <div className="process-icon"><Icon aria-hidden="true" /></div>
+              <div className="process-label">
+                <span className="process-number">{String(index + 1).padStart(2, '0')}</span>
+                <h3>{title.replace(/^\d+\.\s*/, '')}</h3>
+              </div>
+              <p>{description}</p>
+              {index < process.length - 1 && <span className="process-arrow" aria-hidden="true">→</span>}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )
