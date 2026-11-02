@@ -1,0 +1,43 @@
+:root {
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  color: #172033;
+  background: #fff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --color-primary: #0867e8;
+  --color-primary-dark: #07458f;
+  --color-navy: #062b59;
+  --color-navy-deep: #031c3d;
+  --color-secondary: #0caf61;
+  --color-bg: #fff;
+  --color-bg-soft: #f5f8fc;
+  --color-bg-blue: #edf5ff;
+  --color-text: #172033;
+  --color-text-muted: #526078;
+  --color-border: #dbe4f0;
+  --font-body: Inter, "Segoe UI", Arial, sans-serif;
+  --font-heading: Inter, "Segoe UI", Arial, sans-serif;
+  --font-size-xs: .8rem;
+  --font-size-sm: .9rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.15rem;
+  --font-size-xl: 1.45rem;
+  --font-size-2xl: 2rem;
+  --font-size-hero: clamp(2.2rem, 4vw, 3.35rem);
+  --space-1: .35rem;
+  --space-2: .65rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --space-7: 4.5rem;
+  --radius-sm: .5rem;
+  --radius-md: .9rem;
+  --radius-lg: 1.2rem;
+  --shadow-card: 0 8px 26px rgb(21 53 94 / 7%);
+  --shadow-hover: 0 14px 32px rgb(16 64 125 / 13%);
+  --transition: 180ms ease;
+}
