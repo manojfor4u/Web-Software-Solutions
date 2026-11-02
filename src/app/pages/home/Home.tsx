@@ -14,12 +14,12 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <TrustSection />
         <ServicesSection />
         <ProcessSection />
         <PortfolioSection />
         <PricingSection />
         <ContactSection />
+        <TrustSection />
       </main>
       <Footer />
     </>
